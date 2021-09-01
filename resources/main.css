@@ -1,0 +1,70 @@
+/* Variables */
+:root {
+  /* Primary */ 
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* Neutral */
+      /* paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+      /* background, headings, buttons */
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+}
+/* Body */
+body {
+  background-color: var(--very-light-gray);
+  color: var(--transparent-white);
+}
+/* Headings */
+span {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+/* Card */
+.card {
+  border-radius: 20px;
+  margin: 60px 20px;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr;
+  grid-template-areas: 'sedan'
+                       'suv'
+                       'luxury';
+}
+
+/* Sedan */
+.sedan {
+  grid-area: sedan;
+  padding: 30px;
+  border-radius: 20px 20px 0 0;
+  background-color: var(--bright-orange);
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+/* SUVs */
+.suv {
+  grid-area: suv;
+  border: 1px solid grey;
+  background-color: var(--dark-cyan);
+}
+/* Luxury */
+.luxury {
+  grid-area: luxury;
+  border-radius: 0px 0px 20px 20px;
+  background-color: var(--very-dark-cyan);
+
+}
+.content {
+  margin: 20px 0;
+}
+
