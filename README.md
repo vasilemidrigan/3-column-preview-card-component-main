@@ -19,8 +19,11 @@ Users should be able to:
 
 ### See finished work here:
 
-Mobile Version ![](./images/mobile-version.png) 
-Desktop Version ![](./images/desktop-version.png)
+Mobile Version 
+![](./images/mobile-version.png) 
+
+Desktop Version 
+![](./images/desktop-version.png)
 
 ### Built with
 
