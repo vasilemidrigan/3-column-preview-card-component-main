@@ -19,8 +19,8 @@ Users should be able to:
 
 ### See finished work here:
 
-![](./images/mobile-version.png) Mobile Version
-![](./images/desktop-version.png) Desktop Version
+Mobile Version ![](./images/mobile-version.png) 
+Desktop Version ![](./images/desktop-version.png)
 
 ### Built with
 
@@ -31,5 +31,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Vasile Midrigan](https://www.vasilemidrigan.github.io)
+- Website - [Vasile Midrigan](https://vasilemidrigan.github.io/)
 
