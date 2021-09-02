@@ -1,10 +1,10 @@
 /* Variables */
 :root {
-  /* Primary */ 
+  /* Primary colors */ 
   --bright-orange: hsl(31, 77%, 52%);
   --dark-cyan: hsl(184, 100%, 22%);
   --very-dark-cyan: hsl(179, 100%, 13%);
-  /* Neutral */
+  /* Neutral colors */
       /* paragraphs */
   --transparent-white: hsla(0, 0%, 100%, 0.75);
       /* background, headings, buttons */
@@ -17,11 +17,21 @@
   box-sizing: border-box;
   font-family: 'Lexend Deca', sans-serif;
   font-size: 15px;
+  line-height: 1.8em;
 }
 /* Body */
 body {
   background-color: var(--very-light-gray);
   color: var(--transparent-white);
+}
+/* Body media query min-width: 700px */
+@media (min-width: 700px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 /* Headings */
 span {
@@ -32,39 +42,111 @@ span {
 }
 /* Card */
 .card {
-  border-radius: 20px;
-  margin: 60px 20px;
   display: grid;
   grid-template: 1fr 1fr 1fr / 1fr;
   grid-template-areas: 'sedan'
                        'suv'
                        'luxury';
+  min-width: 200px;
+  margin: 60px 20px;
 }
-
+/* Card media query min-width: 700px */
+@media (min-width: 700px) {
+  .card {
+    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-template-areas: 'sedan suv luxury';
+    max-width: 1000px;
+  }
+}
 /* Sedan */
 .sedan {
   grid-area: sedan;
-  padding: 30px;
-  border-radius: 20px 20px 0 0;
   background-color: var(--bright-orange);
   display: flex;
   justify-content: start;
   flex-direction: column;
+  padding: 30px;
+  border-radius: 10px 10px 0 0;
+}
+/* Sedan media query min-width: 700px */
+@media (min-width: 700px) {
+  .sedan {
+    border-radius: 10px 0 0 10px;
+  }
 }
 /* SUVs */
 .suv {
   grid-area: suv;
-  border: 1px solid grey;
   background-color: var(--dark-cyan);
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  padding: 30px;
 }
 /* Luxury */
 .luxury {
   grid-area: luxury;
-  border-radius: 0px 0px 20px 20px;
   background-color: var(--very-dark-cyan);
-
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 30px;
+  border-radius: 0px 0px 10px 10px;
 }
+/* Luxury media query min-width: 700px */
+@media (min-width: 700px) {
+  .luxury {
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+/* Content styles */
 .content {
   margin: 20px 0;
 }
+
+/* Learn More buttons */
+  /* general styles */
+.button {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+/* orange button */
+.orange {
+  background-color: hsla(0, 0%, 100%, 0.75);
+  color: hsl(31, 77%, 52%);
+}
+.orange:hover {
+  background-color: hsl(31, 77%, 52%);
+  color: hsla(0, 0%, 100%, 0.75);
+  cursor: pointer;
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+}
+/* cyan button */
+.cyan {
+  background-color: hsla(0, 0%, 100%, 0.75);
+  color: hsl(184, 100%, 22%);
+}
+.cyan:hover {
+  background-color: hsl(184, 100%, 22%);
+  color: hsla(0, 0%, 100%, 0.75);
+  cursor: pointer;
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+}
+/* dark cyan button */ 
+.darkcyan {
+  background-color:hsla(0, 0%, 100%, 0.75);
+  color: hsl(179, 100%, 13%);
+}
+.darkcyan:hover {
+  background-color: hsl(179, 100%, 13%);;
+  color: hsla(0, 0%, 100%, 0.75);
+  cursor: pointer;
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+}
+
+
 
